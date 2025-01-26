@@ -312,6 +312,13 @@ function setColorsFromUrl(path) {
             colorNames[index].textContent = getColorName(textAreas[index].textContent);
             changeIfDark(colorArray[index], index);
         });
+        slider.value = colorArray.length;
+        if (slider.value === 1) {
+            sliderValueDisplay.textContent = value + ' Color';
+        } else {
+            sliderValueDisplay.textContent = value + ' Colors';
+        }
+
     }
 }
 
