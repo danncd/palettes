@@ -33,7 +33,7 @@ function currentDivs() {
     });
     return num;
 }
-const colors = ['#2C94F7', '#eedc9e', '#ecb0fa', '#dd80a1', '#d27e4e', '#dd80a1'];
+const colors = ['#B0CEF6', '#94BEF4', '#78AEF2', '#5C9EF0', '#408EEE', '#247EEC'];
 
 paletteColors.forEach((paletteColor, index) => {
     paletteColor.style.backgroundColor = colors[index];
