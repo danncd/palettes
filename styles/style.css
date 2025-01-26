@@ -581,5 +581,12 @@ button, a {
         display: none;
     }
 
+    .bottom-buttons {
+        display: none;
+    }
+
+    .top-buttons {
+        flex-direction: row;
+    }
 
 }
