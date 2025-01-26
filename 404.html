@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+</head>
+<body>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const currentPath = window.location.pathname;
+        localStorage.setItem("currentPath", currentPath);
+
+        if (currentPath === "/") {
+            console.log("You are already on the homepage.");
+        } else {
+            window.location.href = "https://palettes.danncd.com";
+        }
+    });
+</script>
+</body>
+</html>
