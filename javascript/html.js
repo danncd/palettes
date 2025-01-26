@@ -5,7 +5,7 @@ function createPalette(color) {
             <div class="palette-color">
                 <div class="palette-tools">
                     <div class="palette-tools-buttons">
-                        <button class="brightness-button"><img src="../images/brightness.png" alt="brightness"></button>
+                        <button class="brightness-button"><img src="images/brightness.png" alt="brightness"></button>
                         <div class="brightness-bar">
                             <div class="shade" data-shade="0"></div>
                             <div class="shade" data-shade="1"></div>
@@ -23,9 +23,9 @@ function createPalette(color) {
                             <div class="shade" data-shade="13"></div>
                             <div class="shade" data-shade="14"></div>
                             </div>
-                        <button class="undo-button"><img src="../images/go-back-arrow.png" alt="undo"></button>
-                        <button class="lock-button"><img src="../images/unlocked.png" alt="lock"></button>
-                        <button class="copy-button"><img src="../images/copy-icon.png" alt="copy"></button>
+                        <button class="undo-button"><img src="images/go-back-arrow.png" alt="undo"></button>
+                        <button class="lock-button"><img src="images/unlocked.png" alt="lock"></button>
+                        <button class="copy-button"><img src="images/copy-icon.png" alt="copy"></button>
                     </div>
                     <div class="copy-button-text">
                             <h3>
