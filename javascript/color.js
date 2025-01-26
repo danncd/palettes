@@ -291,6 +291,7 @@ window.addEventListener('DOMContentLoaded', () => {
         setColorsFromUrl(currentPath);
         updateUrlWithColors();
         localStorage.removeItem('currentPath');
+        console.log(currentPath);
     }
 });
 
