@@ -307,11 +307,11 @@ function setColorsFromUrl(path) {
             colorNames[index].textContent = getColorName(textAreas[index].textContent);
             changeIfDark(colorArray[index], index);
         });
-        slider.value = colorArray.length;
-        if (slider.value === 1) {
-            sliderValueDisplay.textContent = value + ' Color';
+         slider.value= colorArray.length;
+        if (colorArray.length === 1) {
+            sliderValueDisplay.textContent = colorArray.length + ' Color';
         } else {
-            sliderValueDisplay.textContent = value + ' Colors';
+            sliderValueDisplay.textContent = colorArray.length + ' Colors';
         }
 
     }
