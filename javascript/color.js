@@ -295,6 +295,8 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+localStorage.removeItem("currentPath");
+
 function setColorsFromUrl(path) {
     if (typeof path !== 'string') {
         console.error('Invalid path:', path);
@@ -540,6 +542,7 @@ document.querySelector(".palette-download-button").addEventListener("click", fun
 });
 
 document.querySelector(".reset-button").addEventListener("click", function() {
+    localStorage.removeItem("currentPath");
     window.location.reload();
 });
 
