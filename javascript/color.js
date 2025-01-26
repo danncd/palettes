@@ -19,6 +19,9 @@ const generateButton = document.querySelector(".palette-generate-button");
 let unlocked = [true, true, true, true, true, true, true];
 let colorStacks = [];
 
+const slider = document.querySelector(".slider");
+const sliderValueDisplay = document.querySelector(".slider-number-of-colors");
+
 let currentShownPalettes = currentDivs();
 
 function currentDivs() {
@@ -307,7 +310,7 @@ function setColorsFromUrl(path) {
             colorNames[index].textContent = getColorName(textAreas[index].textContent);
             changeIfDark(colorArray[index], index);
         });
-         slider.value= colorArray.length;
+         slider.value = colorArray.length;
         if (colorArray.length === 1) {
             sliderValueDisplay.textContent = colorArray.length + ' Color';
         } else {
@@ -507,8 +510,6 @@ function updatePaletteColors(value) {
     paletteColors[value-1].style.borderBottomRightRadius = '18px';
     updateUrlWithColors()
 }
-const slider = document.querySelector(".slider");
-const sliderValueDisplay = document.querySelector(".slider-number-of-colors");
 
 slider.addEventListener("input", () => {
     removeBrightnessBarsIfClickedOutside();
