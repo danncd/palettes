@@ -142,7 +142,7 @@ button, a {
 
 .body-content {
     width: 1040px;
-    height: calc(100% - 140px);
+    height: 100%;
     min-height: 620px;
     display: flex;
     gap: 20px;
