@@ -312,6 +312,7 @@ function setColorsFromUrl(path) {
         });
     }
 }
+
 function getColorName(hexCode) {
     const n_match = ntc.name(hexCode);
     return n_match[1];
