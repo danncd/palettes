@@ -284,6 +284,35 @@ function hslToRgb(h, s, l) {
     };
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+    const currentPath = localStorage.getItem("currentPath");
+
+    if (currentPath) {
+        setColorsFromUrl(currentPath);
+        updateUrlWithColors();
+        localStorage.removeItem('currentPath');
+    }
+});
+
+function setColorsFromUrl(path) {
+    if (typeof path !== 'string') {
+        console.error('Invalid path:', path);
+        return;
+    }
+    const hash = path.startsWith('/') ? path.substring(1) : path;
+    if (hash) {
+        const colorArray = hash.split('-');
+        colorArray.forEach((colorDiv, index) => {
+            updatePaletteColors(colorArray.length);
+            paletteColors.style.backgroundColor = '#' + colorArray[index];
+            textAreas[index].textContent = colorArray[index];
+            colorNames[index].textContent = getColorName(textAreas[index].textContent);
+            changeIfDark(colorArray[index], index);
+        });
+    }
+}
+
+
 function getColorName(hexCode) {
     const n_match = ntc.name(hexCode);
     return n_match[1];
