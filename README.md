@@ -1,7 +1,7 @@
 # Palettes
 Random palette generator.
 \
-Link: <a href="https://colors.danncd.com/" target="_blank">Colors</a>
+Link: <a href="https://palettes.danncd.com/" target="_blank">Palettes</a>
 
 ## Built with
 [![Built with](https://skillicons.dev/icons?i=js,css,html)](https://skillicons.dev)
