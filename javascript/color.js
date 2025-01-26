@@ -31,8 +31,16 @@ function currentDivs() {
     return num;
 }
 const colors = ['#2C94F7', '#eedc9e', '#ecb0fa', '#dd80a1', '#d27e4e', '#dd80a1'];
+
+const currentPath = localStorage.getItem("currentPath");
 paletteColors.forEach((paletteColor, index) => {
-    paletteColor.style.backgroundColor = colors[index];
+    if (!currentPath) {
+        paletteColor.style.backgroundColor = colors[index];
+    } else if (currentPath) {
+        setColorsFromUrl(currentPath);
+        updateUrlWithColors();
+        localStorage.removeItem('currentPath');
+    }
 });
 
 colorMode.addEventListener("click", function() {
@@ -283,16 +291,6 @@ function hslToRgb(h, s, l) {
         b: Math.round(Math.min(Math.max(b * 255, 0), 255))
     };
 }
-
-window.addEventListener('DOMContentLoaded', () => {
-    const currentPath = localStorage.getItem("currentPath");
-
-    if (currentPath) {
-        setColorsFromUrl(currentPath);
-        updateUrlWithColors();
-        localStorage.removeItem('currentPath');
-    }
-});
 
 function setColorsFromUrl(path) {
     if (typeof path !== 'string') {
