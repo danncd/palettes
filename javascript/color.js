@@ -305,15 +305,13 @@ function setColorsFromUrl(path) {
         const colorArray = hash.split('-');
         colorArray.forEach((colorDiv, index) => {
             updatePaletteColors(colorArray.length);
-            paletteColors.style.backgroundColor = '#' + colorArray[index];
+            paletteColors[index].style.backgroundColor = '#' + colorArray[index];
             textAreas[index].textContent = colorArray[index];
             colorNames[index].textContent = getColorName(textAreas[index].textContent);
             changeIfDark(colorArray[index], index);
         });
     }
 }
-
-
 function getColorName(hexCode) {
     const n_match = ntc.name(hexCode);
     return n_match[1];
