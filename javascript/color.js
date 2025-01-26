@@ -35,15 +35,8 @@ function currentDivs() {
 }
 const colors = ['#2C94F7', '#eedc9e', '#ecb0fa', '#dd80a1', '#d27e4e', '#dd80a1'];
 
-const currentPath = localStorage.getItem("currentPath");
 paletteColors.forEach((paletteColor, index) => {
-    if (!currentPath) {
-        paletteColor.style.backgroundColor = colors[index];
-    } else if (currentPath) {
-        setColorsFromUrl(currentPath);
-        updateUrlWithColors();
-        localStorage.removeItem('currentPath');
-    }
+    paletteColor.style.backgroundColor = colors[index];
 });
 
 colorMode.addEventListener("click", function() {
@@ -169,7 +162,6 @@ brightnessBars.forEach((brightnessBar, index) => {
             paletteColors[index].style.backgroundColor = '#' + hexShade;
             textAreas[index].textContent = hexShade;
             colorNames[index].textContent = getColorName(textAreas[index].textContent);
-            updateUrlWithColors()
 
             changeIfDark(hexShade, index);
 
@@ -404,7 +396,6 @@ undoButtons.forEach((button, index) => {
             colorNames[index].textContent = getColorName(textAreas[index].textContent);
 
             changeIfDark(previousColor, index);
-            updateUrlWithColors()
         }
     });
 });
@@ -444,7 +435,6 @@ function randomizeColors() {
             colorname.textContent = getColorName(color);
             colorStacks[index].push(color);
 
-            updateUrlWithColors();
         }
     });
 }
@@ -508,7 +498,6 @@ function updatePaletteColors(value) {
     }
     paletteColors[value-1].style.borderTopRightRadius = '18px';
     paletteColors[value-1].style.borderBottomRightRadius = '18px';
-    updateUrlWithColors()
 }
 
 slider.addEventListener("input", () => {
@@ -545,23 +534,5 @@ document.querySelector(".palette-download-button").addEventListener("click", fun
 });
 
 document.querySelector(".reset-button").addEventListener("click", function() {
-    localStorage.removeItem("currentPath");
     window.location.reload();
 });
-
-function getColors() {
-    let colorsList = [];
-
-    for(let i = 0; i < palettes.length; i++) {
-        if (!palettes[i].classList.contains('hide')) {
-            colorsList.push(textAreas[i].textContent);
-        }
-    }
-    colorsList = colorsList.join("-").toUpperCase();
-    return colorsList;
-}
-function updateUrlWithColors() {
-    const colorString = getColors();
-    const newUrl = `${window.location.origin}/${colorString}`;
-    history.pushState(null, '', newUrl);
-}
