@@ -11,4 +11,4 @@ Link: <a href="https://palettes.danncd.com/" target="_blank">Palettes</a>
 - Brightness button
 - Undo button
 - Lock button
-
+- 1 to 6 colors
