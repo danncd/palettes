@@ -47,8 +47,8 @@ button, a {
     width: 1040px;
     display: flex;
     flex-direction: row;
-    padding: 20px;
-    gap: 20px;
+    padding: 15px;
+    gap: 15px;
 }
 
 .container-style {
@@ -117,7 +117,7 @@ button, a {
 }
 
 .logo-description {
-    padding: 20px;
+    padding: 15px;
 }
 
 .header-right-container h1 {
@@ -145,18 +145,18 @@ button, a {
     height: 100%;
     min-height: 620px;
     display: flex;
-    gap: 20px;
+    gap: 15px;
     padding-bottom: 20px;
 
 }
 
 .body-content-container {
-    padding: 20px;
+    padding: 15px;
     width: 825px;
-    height: calc(100% - 40px);
+    height: calc(100% - 30px);
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 15px;
 }
 
 #palette-content {
@@ -211,7 +211,7 @@ button, a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     height: auto;
     width: auto;
     visibility: hidden;
@@ -362,7 +362,7 @@ button, a {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .palette-control-settings-container-top {
@@ -385,7 +385,7 @@ button, a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .bottom-buttons {
@@ -394,7 +394,7 @@ button, a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .reset-button {
@@ -496,7 +496,7 @@ button, a {
     }
 
     .body-content-container {
-        width: calc(100% - 80px);
+        width: calc(100% - 60px);
     }
 
     #palette-content {
@@ -543,7 +543,7 @@ button, a {
     }
 
     .palette-control-settings {
-        width: calc(100% - 40px);
+        width: calc(100% - 30px);
         height: auto;
     }
 
@@ -587,6 +587,10 @@ button, a {
 
     .top-buttons {
         flex-direction: row;
+    }
+
+    .palette-generate-button {
+        height: 40px;
     }
 
 }
