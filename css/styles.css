@@ -512,7 +512,7 @@ footer {
 
     .color {
         flex-direction: row;
-        gap: 10px;
+        gap: 5px;
     }
 
     .color-options {
@@ -558,6 +558,6 @@ footer {
     }
 
     .palette-information {
-        width: 175px;
+        width: 150px;
     }
 }
