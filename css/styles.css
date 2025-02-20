@@ -519,6 +519,7 @@ footer {
         flex-direction: row;
         visibility: visible;
         opacity: 1;
+        padding-left: 10px;
     }
 
     .brightness-shades {
