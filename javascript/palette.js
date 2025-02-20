@@ -629,16 +629,22 @@ document.getElementById("logo-button").addEventListener("click", function() {
 });
 
 document.getElementById("reset-button").addEventListener("click", function() {
-    let numOfColors = 0;
     paletteContainer.innerHTML = '';
-    while (numOfColors < 5) {
-        const newColor = document.createElement("div");
-        appendChild(paletteContainer);
-        numOfColors++;
-    }
     colorStacks = [];
-    colorStacks = storedColors;
+    colorStacks = [...storedColors];
     unlocked.fill(true);
+    for (let i = 0; i < 5; i++) {
+        console.log("hello");
+        const newColor = document.createElement("div");
+        paletteContainer.append(addColorToPalette());
+        addFunctionalityToAllButtons();
+        updateColorCount();
+
+        paletteContainer.lastChild.style.backgroundColor = colorStacks[i][0];
+        updateIfDark(paletteContainer.lastChild, colorStacks[i][0]);
+        updateNames(paletteContainer.lastChild, colorStacks[i][0]);
+        updatePaletteInformation();
+    }
 });
 
 //
