@@ -1,70 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Palettes | Online Random Palettes Generator</title>
-        <meta name="description" content="Create color palettes instantly with this fast & simple random color generator." />
-        <meta charset="UTF-8">
-        <meta name="keywords" content="color, palette, generator, random, fast, simple">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="robots" content="index, follow">
-        <link rel="icon" href="logo.ico" type="image/x-icon">
+<head>
+        <!-- Title -->
+    <title>Palettes | Online Random Palettes Generator</title>
 
-        <script src="javascript/html2canvas.js"></script>
+        <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Create color palettes instantly with this fast & simple random color generator.">
+    <meta name="keywords" content="color, palette, generator, random, fast, simple">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <link rel="stylesheet" href="styles/style.css">
-    </head>
-    <body>
-        <div class="body-container">
-            <div class="header">
-                <div class="header-content">
-                    <div class="header-left-container">
-                        <div class="logo-content container-style">
-                            <img src="images/logo.png" alt="">
-                        </div>
+    <meta property="og:title" content="Palettes | Online Random Palettes Generator">
+    <meta property="og:description" content="Create color palettes instantly with this fast & simple random color generator.">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://palettes.danncd.com">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+        <div id="content">
+
+                <!-- Header -->
+            <header>
+                <div id="header-text-logo-container" class="container-style">
+                    <div id="logo-container">
+                        <a id="logo-button" href="#"><img id="header-image-logo" src="images/logo.png" alt="Logo"></a>
+                        <h1>PALETTES</h1>
                     </div>
-                    <div class="header-right-container">
-                        <div class="header-settings container-style">
-                            <div class="logo-info">
-                                <h1>PALETTES</h1>
-                            </div>
-                            <div class="logo-description">
-                                <p>Press the spacebar to generate</p>
-                            </div>
-                        </div>
-                    </div>
+                    <p>PRESS THE SPACEBAR TO GENERATE</p>
                 </div>
-            </div>
-            <div class="body-content">
-                    <div class="body-content-container container-style">
-                        <div id="palette-content">
-                        </div>
+            </header>
+
+                <!-- Content -->
+            <main>
+
+                    <!-- Palette -->
+                <div id="palette" class="container-style">
+                    <div id="palette-wrapper"></div>
+                </div>
+
+                    <!-- Settings: Setting Buttons, Download-->
+                <div id="buttons">
+                    <button id="generate-button" class="settings-button-style">Generate</button>
+                    <div id="adjust-colors-button">
+                        <button id="minus-button" class="settings-button-style">-</button>
+                        <span id="color-count">5</span>
+                        <button id="plus-button" class="settings-button-style">+</button>
                     </div>
-                    <div class="palette-control-settings">
-                        <div class="palette-control-settings-content ">
-                            <div class="palette-control-settings-container-top container-style">
-                                <div class="button-container">
-                                    <div class="top-buttons">
-                                        <button class="palette-generate-button">Generate</button>
-                                        <button class="palette-color-mode-button border-button-settings">Default</button>
-                                        <button class="palette-download-button border-button-settings">Download Palette</button>
-                                        <div class="slider-container">
-                                            <input type="range" class="slider" min="1" max="6" value="6" aria-label="">
-                                            <p class="slider-number-of-colors">6 Colors</p>
-                                        </div>
-                                    </div>
-                                    <div class="bottom-buttons">
-                                        <button class="reset-button border-button-settings">Reset</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
+                    <button id="download-button" class="settings-button-style">口</button>
+                    <button id="reset-button" class="settings-button-style">x</button>
+                </div>
+            </main>
         </div>
 
-        <script src="javascript/html.js"></script>
-        <script type="text/javascript" src="https://chir.ag/projects/ntc/ntc.js"></script>
-        <script src="javascript/color.js"></script>
+        <div id="palette-information-container">
+            <div class="separator"></div>
+            <div id="palette-grid"></div>
+        </div>
 
-    </body>
+        <footer>
+            <div id="footer-container" class="container-style">
+                <a href="https://github.com/danncd" target="_blank"><img id="footer-image" src="images/github.svg" alt="Github"></a>
+                <p id="credits">Made by <a id="credit-name" href="https://danncd.com/" target="_blank">Danny</a></p>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="https://chir.ag/projects/ntc/ntc.js"></script>
+        <script src="javascript/html2canvas.js"></script>
+        <script src="javascript/palette.js"></script>
+</body>
 </html>
