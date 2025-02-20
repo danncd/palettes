@@ -559,6 +559,10 @@ footer {
         width: 100%;
     }
 
+    #reset-button {
+        width: 45px;
+    }
+
     #palette-grid {
         gap: 15px;
     }
