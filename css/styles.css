@@ -547,10 +547,6 @@ footer {
         width: 100%;
     }
 
-    button {
-        touch-action: manipulation;
-    }
-    
     #generate-button {
         padding-left: unset;
         padding-right: unset;
