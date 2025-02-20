@@ -634,7 +634,6 @@ document.getElementById("reset-button").addEventListener("click", function() {
     colorStacks = [...storedColors];
     unlocked.fill(true);
     for (let i = 0; i < 5; i++) {
-        console.log("hello");
         const newColor = document.createElement("div");
         paletteContainer.append(addColorToPalette());
         addFunctionalityToAllButtons();
