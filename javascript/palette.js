@@ -385,7 +385,7 @@ function copyColor(event) {
 
     if (index === -1) return;
 
-    const color = textAreas[index].textContent.toUpperCase();
+    const color = textAreas[index].value.toUpperCase();
 
     navigator.clipboard.writeText(color)
         .then(() => {
