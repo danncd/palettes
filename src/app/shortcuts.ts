@@ -6,7 +6,6 @@ export function bindShortcuts(generate: () => void, close: () => void) {
         }
         if (
             event.code !== "Space" ||
-            event.repeat ||
             event.altKey ||
             event.ctrlKey ||
             event.metaKey ||
@@ -17,11 +16,12 @@ export function bindShortcuts(generate: () => void, close: () => void) {
         if (
             target instanceof Element &&
             target.closest(
-                'input, textarea, select, button:not([data-action="edit"]):not([data-action="shade"]), a, summary, [contenteditable]:not([contenteditable="false"])',
+                'input, textarea, select, a, [contenteditable]:not([contenteditable="false"])',
             )
         )
             return;
         event.preventDefault();
+        if (event.repeat) return;
         generate();
     });
 }
