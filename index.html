@@ -1,75 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-        <!-- Title -->
-    <title>Palettes | Online Random Palettes Generator</title>
-
-        <!-- Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="description" content="Create color palettes instantly with this fast & simple random color generator.">
-    <meta name="keywords" content="color, palette, generator, random, fast, simple">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <meta property="og:title" content="Palettes | Online Random Palettes Generator">
-    <meta property="og:description" content="Create color palettes instantly with this fast & simple random color generator.">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="https://palettes.danncd.com">
-    <meta property="og:type" content="website">
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
-
-</head>
-<body>
-        <div id="content">
-
-                <!-- Header -->
-            <header>
-                <div id="header-text-logo-container" class="container-style">
-                    <div id="logo-container">
-                        <a id="logo-button" href="#"><img id="header-image-logo" src="images/logo.png" alt="Logo"></a>
-                        <h1>PALETTES</h1>
-                    </div>
-                    <p>PRESS THE SPACEBAR TO GENERATE</p>
-                </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Generate, adjust, and export color palettes. A small color tool by Danny."
+        />
+        <meta property="og:title" content="Palettes" />
+        <meta property="og:description" content="Generate, adjust, and export color palettes." />
+        <meta property="og:url" content="https://palettes.danncd.com" />
+        <meta property="og:type" content="website" />
+        <title>Palettes — Color palette generator</title>
+        <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+        <link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="32x32" />
+        <script defer src="/vendor/ntc.js"></script>
+        <script defer src="/vendor/html2canvas.js"></script>
+        <script type="module" src="/src/main.ts"></script>
+    </head>
+    <body>
+        <div class="app">
+            <header class="header">
+                <h1><i data-lucide="swatch-book" aria-hidden="true"></i> Palettes</h1>
             </header>
-
-                <!-- Content -->
-            <main>
-
-                    <!-- Palette -->
-                <div id="palette" class="container-style">
-                    <div id="palette-wrapper"></div>
+            <main class="workspace" aria-label="Palette generator">
+                <div id="palette" class="palette" aria-label="Colors"></div>
+                <div class="bottom-controls">
+                    <div
+                        id="toolbar"
+                        class="toolbar"
+                        role="group"
+                        aria-label="Palette controls"
+                    ></div>
+                    <section id="editor" class="editor" aria-label="Color editor" hidden></section>
                 </div>
-
-                    <!-- Settings: Setting Buttons, Download-->
-                <div id="buttons">
-                    <button id="generate-button" class="settings-button-style">Generate</button>
-                    <div id="adjust-colors-button">
-                        <button id="minus-button" class="settings-button-style">-</button>
-                        <span id="color-count">5</span>
-                        <button id="plus-button" class="settings-button-style">+</button>
-                    </div>
-                    <button id="download-button" class="settings-button-style">口</button>
-                    <button id="reset-button" class="settings-button-style">x</button>
-                </div>
+                <p id="status" class="status" role="status" aria-live="polite"></p>
             </main>
         </div>
-
-        <div id="palette-information-container">
-            <div class="separator"></div>
-            <div id="palette-grid"></div>
-        </div>
-
-        <footer>
-            <div id="footer-container" class="container-style">
-                <a href="https://github.com/danncd" target="_blank"><img id="footer-image" src="images/github.svg" alt="Github"></a>
-                <p id="credits">Made by <a id="credit-name" href="https://danncd.com/" target="_blank">Danny</a></p>
-            </div>
-        </footer>
-
-        <script type="text/javascript" src="https://chir.ag/projects/ntc/ntc.js"></script>
-        <script src="javascript/html2canvas.js"></script>
-        <script src="javascript/palette.js"></script>
-</body>
+        <noscript>Enable JavaScript to generate and edit palettes.</noscript>
+    </body>
 </html>

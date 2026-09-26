@@ -1,0 +1,67 @@
+.app {
+    min-height: 100dvh;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    padding: var(--section-space) 0;
+    flex-shrink: 0;
+}
+.header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+.workspace {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    position: relative;
+}
+.palette {
+    height: clamp(340px, calc(100dvh - 160px), var(--palette-max-height));
+}
+.bottom-controls {
+    padding: var(--section-space) 0;
+    min-height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.status {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    pointer-events: none;
+}
+@media (max-width: 900px) {
+    .app {
+        padding: 0 12px;
+        height: 100dvh;
+        min-height: 600px;
+    }
+    .workspace {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-height: min-content;
+    }
+    .palette {
+        height: auto;
+        flex: 1;
+        min-height: var(--swatches-min-height, 340px);
+    }
+    .bottom-controls {
+        flex-shrink: 0;
+        padding-bottom: max(var(--section-space), env(safe-area-inset-bottom));
+    }
+}

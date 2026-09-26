@@ -1,3 +1,34 @@
 {
-  "colors": ["#4255a3", "#576cbb", "#76a1b2", "#94b6c3", "#96accb", "#a0b4d0", "#b4c4da", "#c8d4e4"]
+    "colors": [
+        "#4255a3",
+        "#576cbb",
+        "#76a1b2",
+        "#94b6c3",
+        "#96accb",
+        "#a0b4d0",
+        "#b4c4da",
+        "#c8d4e4"
+    ],
+    "presets": [
+        {
+            "name": "Coastal blue",
+            "colors": ["#4255a3", "#576cbb", "#76a1b2", "#94b6c3", "#96accb"]
+        },
+        {
+            "name": "Sage and clay",
+            "colors": ["#425566", "#849C94", "#D7DFD3", "#E9DCC8", "#BB8066"]
+        },
+        {
+            "name": "Dusk",
+            "colors": ["#414D68", "#7B8DA6", "#C5CED6", "#E6DCCF", "#C49F8C"]
+        },
+        {
+            "name": "Woodland",
+            "colors": ["#484E46", "#88917D", "#C7CCBA", "#E7E1D5", "#B9A48F"]
+        },
+        {
+            "name": "Apricot",
+            "colors": ["#624B61", "#A47786", "#D4A5A0", "#EBC8B2", "#F4E6CF"]
+        }
+    ]
 }

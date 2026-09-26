@@ -1,0 +1,22 @@
+:root {
+    color-scheme: light dark;
+    --paper: light-dark(#ffffff, #191919);
+    --ink: light-dark(#262626, #ededed);
+    --muted: light-dark(#737373, #aaaaaa);
+    --line: light-dark(#e6e6e6, #363636);
+    --soft: light-dark(#f7f7f7, #242424);
+    --focus: light-dark(#335b9b, #a8c8ff);
+    --danger: light-dark(#b42318, #ffaaa1);
+    --content-width: 1040px;
+    --palette-max-height: 740px;
+    --section-space: 24px;
+    --icon-size: 36px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+@media (pointer: coarse) {
+    :root {
+        --icon-size: 44px;
+    }
+}
