@@ -17,6 +17,7 @@ import { copyHex } from "../browser/clipboard";
 import { exportPng } from "../browser/export-png";
 import { bindShortcuts } from "./shortcuts";
 import { icon } from "./icons";
+import { bindThemeToggle } from "./theme";
 
 export function startApp() {
     const state = createState();
@@ -26,6 +27,7 @@ export function startApp() {
     const editor = document.getElementById("editor")!;
     const notify = createFeedback(document.getElementById("status")!);
     app.querySelector('[data-lucide="swatch-book"]')!.replaceWith(icon("swatch-book"));
+    bindThemeToggle(document.querySelector<HTMLButtonElement>("#theme-toggle")!);
     createToolbar(toolbar);
     createEditor(editor);
     const input = editor.querySelector<HTMLInputElement>("input")!;

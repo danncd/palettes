@@ -11,6 +11,8 @@ import {
     X,
     Copy,
     RotateCcw,
+    Sun,
+    Moon,
 } from "lucide";
 
 const icons = {
@@ -25,6 +27,8 @@ const icons = {
     x: X,
     copy: Copy,
     "rotate-ccw": RotateCcw,
+    sun: Sun,
+    moon: Moon,
 };
 export type IconName = keyof typeof icons;
 

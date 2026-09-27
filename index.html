@@ -12,6 +12,16 @@
         <meta property="og:url" content="https://palettes.danncd.com" />
         <meta property="og:type" content="website" />
         <title>Palettes — Color palette generator</title>
+        <script>
+            try {
+                const theme = localStorage.getItem("palettes-theme");
+                if (theme === "light" || theme === "dark") {
+                    document.documentElement.dataset.theme = theme;
+                }
+            } catch {
+                // Use the system theme when storage is unavailable.
+            }
+        </script>
         <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
         <link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="32x32" />
         <script defer src="/vendor/ntc.js"></script>
@@ -21,7 +31,15 @@
     <body>
         <div class="app">
             <header class="header">
-                <h1><i data-lucide="swatch-book" aria-hidden="true"></i> Palettes</h1>
+                <div class="header-title">
+                    <h1><i data-lucide="swatch-book" aria-hidden="true"></i> Palettes</h1>
+                    <button
+                        id="theme-toggle"
+                        class="icon-button"
+                        type="button"
+                        aria-label="Switch color theme"
+                    ></button>
+                </div>
             </header>
             <main class="workspace" aria-label="Palette generator">
                 <div id="palette" class="palette" aria-label="Colors"></div>

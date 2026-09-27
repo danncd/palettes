@@ -7,6 +7,17 @@
 .header {
     padding: var(--section-space) 0;
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+.header-title {
+    position: relative;
+}
+#theme-toggle {
+    position: absolute;
+    left: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
 }
 .header h1 {
     display: flex;

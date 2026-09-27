@@ -16,7 +16,7 @@ export function bindShortcuts(generate: () => void, close: () => void) {
         if (
             target instanceof Element &&
             target.closest(
-                'input, textarea, select, a, [contenteditable]:not([contenteditable="false"])',
+                'input, textarea, select, a, #theme-toggle, [contenteditable]:not([contenteditable="false"])',
             )
         )
             return;
